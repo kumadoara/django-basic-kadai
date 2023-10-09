@@ -1,0 +1,21 @@
+{% extends "product_list.html" %}
+{% load bootstrap %}
+
+{% block title %}商品詳細{% endblock %}
+{% block content %}
+ <h1>商品詳細</h1>
+ <table border="1">
+    <thead>
+        <tr>
+            <th>商品名</th>
+            <th>価格</th>
+        </tr>
+    </thead>
+    {% for product in object_list %}
+<tr>
+    <td>{{ product_detail.name }}</td>
+    <td>{{ product_detail.price }} 円</td>        
+</tr>
+{% endfor %}
+</table>
+{% endblock %}
